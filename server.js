@@ -16,6 +16,7 @@ const corsOptions = {
     "https://boda-ceci-angel-bnd.vercel.app",
     "https://ceciigaska.github.io",
     "https://ceciigaska.github.io/bodaCeci-Angel",
+    "null"
   ],
   methods: ["GET", "POST", "OPTIONS", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Accept", "Authorization", "X-Requested-With"],
