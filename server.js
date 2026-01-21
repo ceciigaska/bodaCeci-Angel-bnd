@@ -13,7 +13,7 @@ const corsOptions = {
     "http://localhost:3000",
     "http://localhost:5000",
     "http://127.0.0.1:5500",
-    "https://boda-cecily-angel-backend.vercel.app",
+    "https://boda-ceci-angel-bnd.vercel.app",
     "https://ceciigaska23.github.io",
   ],
   methods: ["GET", "POST", "OPTIONS", "PUT", "DELETE"],
@@ -278,7 +278,7 @@ app.post("/api/submit", async (req, res) => {
 
     if (jsonData.success) {
       const confirmationNumber = jsonData.confirmationNumber;
-      const qrUrl = `https://boda-cecily-angel-backend.vercel.app/qr-code/${confirmationNumber}`;
+      const qrUrl = `https://boda-ceci-angel-bnd.vercel.app/qr-code/${confirmationNumber}`;
 
       const whatsappText = encodeURIComponent(
         `🎉 ¡Hola ${name}!\n\n` +
@@ -326,7 +326,7 @@ app.post("/api/submit", async (req, res) => {
 app.get('/qr-code/:code', async (req, res) => {
     try {
         const { code } = req.params;
-        const validationUrl = `https://boda-cecily-angel.vercel.app/validacion-qr/?code=${code}`;
+        const validationUrl = `https://boda-ceci-angel-bnd.vercel.app/validacion-qr/?code=${code}`;
         const qrImage = await QRCode.toBuffer(validationUrl, { type: 'png', width: 300 });
 
         res.writeHead(200, {
